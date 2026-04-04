@@ -1,0 +1,21 @@
+datum,klant,product,categorie,aantal,prijs_per_stuk,totaal,regio,verkoper
+2024-01-03,Bakkerij De Zon,Laptop,Elektronica,2,899.00,1798.00,Noord,Emma Visser
+2024-01-05,Garage Pietersen,Printer,Kantoor,1,349.50,349.50,Zuid,Lars de Boer
+2024-01-07,Hotel Oranje,Monitor,Elektronica,4,279.00,1116.00,West,Emma Visser
+2024-01-10,Bakkerij De Zon,Toetsenbord,Kantoor,3,89.00,267.00,Noord,
+2024-01-12,Kapsalon Stijl,Webcam,Elektronica,2,69.95,139.90,Oost,Lars de Boer
+2024-01-15,,Muis,Kantoor,5,24.99,124.95,Zuid,Sophie Jansen
+2024-01-18,Tandartspraktijk Smit,Headset,Audio,1,159.00,159.00,Oost,Sophie Jansen
+2024-01-20,Garage Pietersen,Laptop,Elektronica,1,899.00,899.00,Zuid,Lars de Boer
+2024-01-22,Hotel Oranje,Webcam,Elektronica,,69.95,,West,Emma Visser
+2024-01-25,Fysiotherapie Noord,USB-hub,Kantoor,6,34.00,204.00,Noord,Sophie Jansen
+2024-02-01,Kapsalon Stijl,Monitor,Elektronica,2,279.00,558.00,Oost,
+2024-02-03,Tandartspraktijk Smit,Printer,Kantoor,1,349.50,349.50,Oost,Lars de Boer
+2024-02-07,Fysiotherapie Noord,Headset,Audio,3,159.00,477.00,Noord,Emma Visser
+2024-02-10,Bakkerij De Zon,USB-hub,Kantoor,10,34.00,340.00,Noord,Sophie Jansen
+2024-02-14,,Laptop,Elektronica,1,899.00,899.00,West,Lars de Boer
+2024-02-17,Garage Pietersen,Toetsenbord,Kantoor,2,89.00,178.00,Zuid,Emma Visser
+2024-02-20,Hotel Oranje,Muis,Kantoor,8,24.99,199.92,West,Sophie Jansen
+2024-02-22,Kapsalon Stijl,Headset,Audio,1,159.00,159.00,Oost,Lars de Boer
+2024-02-25,Fysiotherapie Noord,Monitor,Elektronica,1,279.00,279.00,Noord,
+2024-03-01,Tandartspraktijk Smit,Webcam,Elektronica,2,69.95,139.90,Oost,Emma Visser
