@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV Analyse — Resultaat</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 60px auto; padding: 0 20px; color: #333; }
+    h1 { font-size: 1.6rem; margin-bottom: 0.3rem; }
+    .meta { color: #666; margin-bottom: 24px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 32px; }
+    th { background: #3a7bd5; color: white; padding: 10px 14px; text-align: left; }
+    td { padding: 9px 14px; border-bottom: 1px solid #e0e0e0; }
+    tr:hover td { background: #f5f8ff; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 12px;
+             font-size: 0.82rem; font-weight: bold; }
+    .badge-ok { background: #e8f5e9; color: #2e7d32; }
+    .badge-warn { background: #fff8e1; color: #f57f17; }
+    .badge-error { background: #fdecea; color: #b71c1c; }
+    img { max-width: 100%; border: 1px solid #ddd; border-radius: 6px; }
+    a.terug { display: inline-block; margin-top: 24px; color: #3a7bd5; text-decoration: none; }
+    a.terug:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Analyseresultaat</h1>
+  <p class="meta">
+    Bestand: <strong>{{ data.bestandsnaam }}</strong> &nbsp;|&nbsp;
+    {{ data.aantal_rijen }} rijen &nbsp;|&nbsp;
+    {{ data.aantal_kolommen }} kolommen
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Kolom</th>
+        <th>Datatype</th>
+        <th>Lege waarden</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for rij in data.rijen %}
+      <tr>
+        <td>{{ rij.kolom }}</td>
+        <td>{{ rij.datatype }}</td>
+        <td>
+          {% if rij.pct_leeg == 0 %}
+            <span class="badge badge-ok">{{ rij.aantal_leeg }} ({{ rij.pct_leeg }}%)</span>
+          {% elif rij.pct_leeg < 20 %}
+            <span class="badge badge-warn">{{ rij.aantal_leeg }} ({{ rij.pct_leeg }}%)</span>
+          {% else %}
+            <span class="badge badge-error">{{ rij.aantal_leeg }} ({{ rij.pct_leeg }}%)</span>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h2>Grafiek</h2>
+  <img src="/static/rapport.png" alt="Staafdiagram lege waarden per kolom">
+
+  <br>
+  <a class="terug" href="/">&#8592; Nieuw bestand uploaden</a>
+</body>
+</html>

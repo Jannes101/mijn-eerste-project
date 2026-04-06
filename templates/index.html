@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV Analyse — Upload</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; color: #333; }
+    h1 { font-size: 1.6rem; margin-bottom: 0.3rem; }
+    p.subtitel { color: #666; margin-top: 0; }
+    .kaart { border: 2px dashed #aac; border-radius: 8px; padding: 40px; text-align: center; background: #f8f9ff; }
+    input[type="file"] { margin: 16px 0; }
+    button { background: #3a7bd5; color: white; border: none; padding: 10px 28px;
+             border-radius: 5px; font-size: 1rem; cursor: pointer; }
+    button:hover { background: #2c64b5; }
+    .fout { background: #fdecea; border: 1px solid #e57373; color: #b71c1c;
+            border-radius: 5px; padding: 10px 16px; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <h1>CSV Analyse</h1>
+  <p class="subtitel">Upload een CSV-bestand om de kwaliteit te analyseren.</p>
+
+  {% if fout %}
+  <div class="fout">{{ fout }}</div>
+  {% endif %}
+
+  <div class="kaart">
+    <form method="post" action="/upload" enctype="multipart/form-data">
+      <label for="bestand"><strong>Kies een CSV-bestand:</strong></label><br>
+      <input type="file" id="bestand" name="bestand" accept=".csv" required><br>
+      <button type="submit">Analyseren</button>
+    </form>
+  </div>
+</body>
+</html>
